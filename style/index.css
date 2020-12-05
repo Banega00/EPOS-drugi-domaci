@@ -1,0 +1,180 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+html{
+    --naslov:rgb(143, 14, 14);
+}
+
+header{
+    background: url('../slike/pozadine/jumbotron8.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow-x: hidden;
+    background-position: 50% calc(50% - 50px);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+    width: 100vw;
+    height: 95vh;
+}
+
+#pocetna-section{
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template:  repeat(3,1fr) / repeat(2,1fr);
+    grid-gap:70px;
+}
+
+#pocetna-section > *{
+    background-color: white;
+    transition: transform 1s;
+    position: relative;
+}
+
+#pocetna-section > *:hover{
+    transform: scale(1.05);
+}
+
+@media only screen and (max-width: 900px){
+    #pocetna-section{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.onama{
+    margin: auto;
+    width: 100%;
+    border-radius: 20px;
+    margin-top: 50px;
+    box-shadow: 5px 5px 19px 6px rgba(0,0,0,0.3);
+    grid-column: 1/3;
+}
+
+.onama .onama-naslov{
+    background-color: var(--naslov);
+    font-size: 2em;
+    border-radius: 20px 20px 0 0;
+    padding:15px;
+    color:white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.onama .onama-naslov >*{
+    flex:1;
+}
+
+.kruzici{
+    max-width: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.kruzici > *{
+    width:25px;
+    height:25px;
+    background-color: white;
+    border-radius: 100%;
+}
+
+.kruzici > *:nth-child(1){
+    background-color: red;
+}
+
+.kruzici > *:nth-child(2){
+    background-color: yellow;
+}
+
+.kruzici > *:nth-child(3){
+    background-color: rgb(7, 211, 7);
+}
+
+@media only screen and (max-width: 600px){
+    .kruzici{
+        flex-direction: column;
+        justify-content: space-around;
+    }
+}
+
+.onama .onama-text{
+    padding:20px;
+    display: flex;
+    font-size: 1.5em;
+    text-align: justify;
+}
+
+.onama .onama-car-img img{
+    mix-blend-mode: multiply;
+}
+
+@media only screen and (max-width: 900px){
+    .onama .onama-text{
+        flex-direction: column;
+    }
+
+    .onama .onama-car-img img{
+        width: 100%;
+    }
+}
+
+.pocetna-kartice{
+    box-shadow: 5px 5px 19px 6px rgba(0,0,0,0.3);
+    border-radius: 20px 20px 0 0;
+    padding-bottom: 20px;
+}
+
+.kartica-naslov{
+    background-color: var(--naslov);
+    display: flex;
+    justify-content: space-between;
+    padding:10px;
+    border-radius: 20px 20px 0 0;
+    color:white;
+}
+
+.kartica-text{
+    padding:20px;
+    padding-bottom: 0px;
+    font-size: 1em;
+    text-align: justify;
+}
+
+.kartica-text img{
+    float:left;
+    max-width: 260px;
+    margin:5px;
+}
+
+.ikonica{
+    text-align: center;
+    width: 28px;
+    height: 28px;
+}
+
+.vidijos{
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    transform:rotate(90deg);
+    width: 40px;
+    height: 40px;
+    
+    transition: transform 1s;
+}
+
+/* FOOTER ---------------------*/
+
+footer{
+    height: 55vh;
+    background-color: var(--naslov);
+    margin-top:40px;
+}

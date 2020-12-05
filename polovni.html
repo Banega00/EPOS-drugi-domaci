@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Goldman&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style/novi.css">
+    <link rel="stylesheet" href="style/nav.css">
+    <link rel="stylesheet" href="style/polovni.css">
+    <title>Polovni automobili</title>
+</head>
+
+<body>
+    <div id="sadrzaj">
+        <div id="nav-filter-container">
+            <div id="mobile-menu">
+                <div>
+                    <div><a href="index.html" target="_blank">Početna</a></div>
+                    <div><a href="polovni.html" target="_blank">Polovni automobili</a></div>
+                    <div><a href="novi.html" target="_blank">Novi automobili</a></div>
+                    <div><a href="servis.html" target="_blank">Servis</a></div>
+                    <div><a href="rent.html" target="_blank">Rent</a></div>
+                </div>
+            </div>
+            <nav>
+                <img src="slike/ikonice/hamburger.png" alt="" id="hamburger">
+                <div id="menu">
+                    <div><a href="index.html" target="_blank">Početna</a></div>
+                    <div><a href="polovni.html" target="_blank">Polovni</a></div>
+                    <div><a href="novi.html" target="_blank">Novi</a></div>
+                    <div><a href="servis.html" target="_blank">Servis</a></div>
+                    <div><a href="rent.html" target="_blank">Rent</a></div>
+                </div>
+                <div id="logo">
+                    <h1>Polovni automobili</h1>
+                </div>
+            </nav>
+
+            <div id="filter-container">
+                <div id="filter-natpis">
+                    FILTER <img class="jos-podataka-ikonica" src="slike/ikonice/jos_podataka_ikonica.png" alt="">
+                </div>
+                <div id="filter-opcije">
+                    <div id="opcije-container">
+                        <div class="opcija-marka-div">
+                            <h4>Marka</h4>
+                            <select id="select-marka" onchange="filter()">
+                                <option> Sve </option>
+                                <option> Peugeot </option>
+                                <option> BMW </option>
+                            </select>
+                        </div>
+
+                        <div class="opcija-karoserija-div">
+                            <h4>Karoserija</h4>
+                            <select id="select-karoserija" onchange="filter()">
+                                <option> Sve </option>
+                                <option> Limo </option>
+                                <option> Hečbek </option>
+                                <option> Džip </option>
+                                <option> Karavan</option>
+                                <option> Kabriolet</option>
+                            </select>
+                        </div>
+
+                        <div class="opcija-gorivo-div">
+                            <h4>Gorivo</h4>
+                            <select id="select-gorivo" onchange="filter()">
+                                <option> Sve </option>
+                                <option> Benzin </option>
+                                <option> Dizel </option>
+                                <option> Električni pogon </option>
+                                <option> Hibrid</option>
+                            </select>
+                        </div>
+
+                        <div class="opcija-godiste-div">
+                            <h4>Godiste</h4>
+                            <div class="godiste-od-do">
+                                <select id="select-godiste" class="od" onchange="filter()">
+                                    <option> 1970 </option>
+                                    <option> 1971 </option>
+                                    <option> 1972 </option>
+                                    <option> 1973 </option>
+                                    <option> 1974 </option>
+                                    <option> 1975 </option>
+                                    <option> 1976 </option>
+                                    <option> 1977 </option>
+                                    <option> 1978 </option>
+                                    <option> 1979 </option>
+                                    <option> 1980 </option>
+                                    <option> 1981 </option>
+                                    <option> 1982 </option>
+                                    <option> 1983 </option>
+                                    <option> 1984 </option>
+                                    <option> 1985 </option>
+                                    <option> 1986 </option>
+                                    <option> 1987 </option>
+                                    <option> 1988 </option>
+                                    <option> 1989 </option>
+                                    <option> 1990 </option>
+                                    <option> 1991 </option>
+                                    <option> 1992 </option>
+                                    <option> 1993 </option>
+                                    <option> 1994 </option>
+                                    <option> 1995 </option>
+                                    <option> 1996 </option>
+                                    <option> 1997 </option>
+                                    <option> 1998 </option>
+                                    <option> 1999 </option>
+                                    <option> 2000 </option>
+                                    <option> 2001 </option>
+                                    <option> 2002 </option>
+                                    <option> 2003 </option>
+                                    <option> 2004 </option>
+                                    <option> 2005 </option>
+                                    <option> 2006 </option>
+                                    <option> 2007 </option>
+                                    <option> 2008 </option>
+                                    <option> 2009 </option>
+                                    <option> 2010 </option>
+                                    <option> 2011 </option>
+                                    <option> 2012 </option>
+                                    <option> 2013 </option>
+                                    <option> 2014 </option>
+                                    <option> 2015 </option>
+                                    <option> 2016 </option>
+                                    <option> 2017 </option>
+                                    <option> 2018 </option>
+                                    <option> 2019 </option>
+                                    <option> 2020 </option>
+                                </select>
+                                <select id="select-godiste" class="do" onchange="filter()">
+                                    <option> 1970 </option>
+                                    <option> 1971 </option>
+                                    <option> 1972 </option>
+                                    <option> 1973 </option>
+                                    <option> 1974 </option>
+                                    <option> 1975 </option>
+                                    <option> 1976 </option>
+                                    <option> 1977 </option>
+                                    <option> 1978 </option>
+                                    <option> 1979 </option>
+                                    <option> 1980 </option>
+                                    <option> 1981 </option>
+                                    <option> 1982 </option>
+                                    <option> 1983 </option>
+                                    <option> 1984 </option>
+                                    <option> 1985 </option>
+                                    <option> 1986 </option>
+                                    <option> 1987 </option>
+                                    <option> 1988 </option>
+                                    <option> 1989 </option>
+                                    <option> 1990 </option>
+                                    <option> 1991 </option>
+                                    <option> 1992 </option>
+                                    <option> 1993 </option>
+                                    <option> 1994 </option>
+                                    <option> 1995 </option>
+                                    <option> 1996 </option>
+                                    <option> 1997 </option>
+                                    <option> 1998 </option>
+                                    <option> 1999 </option>
+                                    <option> 2000 </option>
+                                    <option> 2001 </option>
+                                    <option> 2002 </option>
+                                    <option> 2003 </option>
+                                    <option> 2004 </option>
+                                    <option> 2005 </option>
+                                    <option> 2006 </option>
+                                    <option> 2007 </option>
+                                    <option> 2008 </option>
+                                    <option> 2009 </option>
+                                    <option> 2010 </option>
+                                    <option> 2011 </option>
+                                    <option> 2012 </option>
+                                    <option> 2013 </option>
+                                    <option> 2014 </option>
+                                    <option> 2015 </option>
+                                    <option> 2016 </option>
+                                    <option> 2017 </option>
+                                    <option> 2018 </option>
+                                    <option> 2019 </option>
+                                    <option selected="selected"> 2020 </option>
+                                </select>
+                            </div>
+                            </div>
+                        <div class="opcija-kilometraza-div">
+                            <h4>Kilometraza</h4>
+                            <div class="kilometraza-od-do">
+                                <input type="number" id="kilometrazaInputOd" placeholder="od" onchange="filter()">
+                                <input type="number" id="kilometrazaInputDo" placeholder="do" onchange="filter()">
+                            </div>
+                        </div>
+
+                        <div class="opcija-cena-div">
+                            <h4>Cena €</h4>
+                            <div class="cena-od-do">
+                                <input type="number" id="cenaInputOd" placeholder="od" oninput="filter()">
+                                <input type="number" id="cenaInputDo" placeholder="do" oninput="filter()">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="nemaRezultataDiv">
+            <h2>Nema rezultata :(</h2>
+        </div>
+
+        <div id="automobili-container">
+
+            <div class="automobil-kartica"
+            data-marka="Skoda"
+            data-karoserija="Limo"
+            data-gorivo="Benzin"
+            data-cena="22000"
+            data-godiste="2004"
+            data-kilometraza="190000"
+            >
+                <div class="automobil-img-div">
+                    <img src="slike/automobili/novi/skoda_superb.png" alt="">
+                </div>
+
+                <div class="automobil-podaci">
+                    <div class="podaci-naziv">Škoda Superb</div>
+                    <div class="ostali-podaci">
+                        <div class="prikazani-podaci">
+                            <div class="podaci motor">Motor: 1.9TDI</div>
+                            <div class="podaci sedista">Sedišta: 5</div>
+                            <div class="podaci karoserija">Karoserija: Limo</div>
+                            <div class="podaci menjac">Menjač: Automatik</div>
+                            <div class="podaci cena">Cena: 22 000 €</div>
+                        </div>
+                        <div class="sakriveni-podaci">
+                            <div class="podaci snaga">Snaga: 140/190 (kW/KS)</div>
+                            <div class="podaci gorivo">Gorivo: Benzin</div>
+                            <div class="podaci pogon">Pogon: 4x4</div>
+                            <div class="podaci godiste">Godiste: 2004</div>
+                            <div class="podaci kilometraza">Presao: 190 000km</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="jos-podataka">
+                    jos info<img class="jos-podataka-ikonica" src="slike/ikonice/jos_podataka_ikonica.png" alt="">
+                </div>
+            </div>
+
+            <div class="automobil-kartica"
+            data-marka="Opel"
+            data-karoserija="Hečbek"
+            data-gorivo="Benzin"
+            data-cena="15000"
+            >
+                <div class="automobil-img-div">
+                    <img src="slike/automobili/novi/opel_astra.png" alt="">
+                </div>
+
+                <div class="automobil-podaci">
+                    <div class="podaci-naziv">Opel Astra</div>
+                    <div class="ostali-podaci">
+                        <div class="prikazani-podaci">
+                            <div class="podaci motor">Motor: 1.9TDI</div>
+                            <div class="podaci sedista">Sedišta: 5</div>
+                            <div class="podaci menjac">Menjač: Automatik</div>
+                            <div class="podaci snaga">Snaga: 140/190 (kW/KS)</div>
+                            <div class="podaci cena">Cena: 15 000 €</div>
+                        </div>
+                        <div class="sakriveni-podaci">
+                            <div class="podaci menjac">Menjač: Automatik</div>
+                            <div class="podaci snaga">Snaga: 140/190 (kW/KS)</div>
+                            <div class="podaci gorivo">Gorivo: Benzin</div>
+                            <div class="podaci pogon">Pogon: 4x4</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="jos-podataka">
+                    jos info<img class="jos-podataka-ikonica" src="slike/ikonice/jos_podataka_ikonica.png" alt="">
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <script src="script/polovni.js"></script>
+    <script src="script/menu.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,281 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+}
+
+
+/* Pozadina */
+
+body{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-image: url("../slike/pozadine/jumbotron11.jpg");
+}
+
+@media only screen and (max-width: 800px) {
+    body{
+        background-position: calc(50% + 200px) 50%;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    body{
+        background-position: calc(50% + 290px) 50%;
+    }
+}
+
+#pozadine{
+    /* position: absolute; */
+}
+
+#pozadine > *{
+    height: 95vh;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    
+}
+
+#prva-slika {
+    background-image: url("../slike/pozadine/jumbotron14.jpg");
+    background-position: 50% calc(50% - 100px);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+}
+
+#druga-slika {
+
+}
+
+#treca-slika {
+    background-image: url("../slike/pozadine/jumbotron7.jpg");
+    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+}
+
+/* //////////////////SADRZAJ////////////////////////////// */
+
+#sadrzaj{
+    position: absolute;
+    z-index: 10;
+}
+
+
+/* FILTER */
+#nav-filter-container{
+    position: fixed;
+    z-index: 100;
+}
+
+nav{
+    position:relative !important;
+    width: 100vw !important;
+}
+
+#filter-container{
+    display: flex;
+}
+
+#filter-natpis{
+    background-color: rgba(0, 0, 0, 0.6);
+    color:white;
+    font-size: 1.8em;
+    padding:10px;
+    display: flex;
+    align-items:center;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+#filter-natpis:hover{
+    background-color: black;
+}
+
+#filter-opcije{
+    background-color: rgba(0, 0, 0, 0.6);
+    flex:1;
+    display: none;
+}
+
+#opcije-container{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+#opcije-container > *{
+    flex:1;
+    padding:3px;
+    color:white;
+    border-right: 0.4px solid white;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+}
+
+select{
+    height: 50%;
+    margin:0 15px;
+}
+
+#opcije-container > * h4{
+    padding-left: 15px;
+}
+
+.cena-od-do{
+    display: flex;
+    margin:0 15px;
+}
+
+.cena-od-do input{
+    width: 30%;
+    min-width: 30px;
+    margin-right: 3px;
+}
+
+@media only screen and (max-width: 630px){
+    #opcije-container{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #opcije-container > *{
+        border-left: 0.4px solid white;
+        border-right: none;
+    }
+
+    .cena-od-do {
+        margin:0 0;
+    }
+
+    .cena-od-do > *:first-child{
+        margin-left: 15px;
+    }
+
+    #opcije-container > *{
+        flex:0 0 15%;
+        height: 50%;
+    }
+
+    #opcije-container select{
+        width: 150px !important;
+    }
+
+    #opcije-container input{
+        width: 74px !important;
+    }
+}
+
+/* AUTOMOBILI CONTAINER */
+
+#automobili-container{
+    width: 98vw;
+    padding:200px 10% 0 10%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    grid-auto-rows: 240px;
+    gap: 5%;
+}
+
+@media only screen and (max-width: 630px){
+    #automobili-container{
+        padding-top: 270px 10% 0 10%;
+    }
+}
+
+.automobil-kartica{
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.7);
+    max-width: 300px;
+}
+
+.automobil-img-div{
+    height: 40%;
+    width: 100%;
+    padding:5px;
+}
+
+.automobil-img-div img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.5s;
+}
+.automobil-kartica:hover .automobil-img-div img{
+    transform: scale(1.1);
+}
+
+.automobil-podaci{
+    width: 100%;
+    color:white;
+}
+
+.podaci-naziv{
+    text-align: center;
+}
+
+.ostali-podaci{
+    font-size: 0.68em;
+    display: flex;
+    padding-top:15px;
+    padding-left: 10px;
+    justify-content: space-between;
+}
+
+.prikazani-podaci{
+
+}
+
+.sakriveni-podaci{
+    display:none;
+}
+
+.jos-podataka{
+    background-color: black;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    color:white;
+    font-size: 0.7em;
+    cursor: pointer;
+    padding: 2px;
+    display: flex;
+}
+
+.jos-podataka .jos-podataka-ikonica{
+    width: 15px;
+    height: 15px;
+    align-self: center;
+    transition: transform 0.5s;
+}
+
+.flip-hor{
+    transition: transform 0.5s;
+    transform: rotate(180deg);
+}
+
+.logo-automobila{
+    display: flex;
+    justify-content: flex-start;
+    align-items:flex-start;
+}
+
+.logo-automobila img{
+    width: 84px;
+    height: 84px;
+}
+
+#nemaRezultataDiv{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    color:white;
+    top:40%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    padding: 20px;
+    margin:auto;
+    width: 65%;
+    display: none;
+}
