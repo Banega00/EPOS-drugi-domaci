@@ -177,6 +177,7 @@ select{
     grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
     grid-auto-rows: 240px;
     gap: 5%;
+    justify-items: center;
 }
 
 @media only screen and (max-width: 630px){
@@ -235,10 +236,10 @@ select{
 .jos-podataka{
     background-color: black;
     position: absolute;
-    bottom: 5px;
-    right: 5px;
+    bottom: 0px;
+    right: 0px;
     color:white;
-    font-size: 0.7em;
+    font-size: 0.6em;
     cursor: pointer;
     padding: 2px;
     display: flex;

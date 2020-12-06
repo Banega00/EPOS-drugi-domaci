@@ -49,6 +49,18 @@ select#select-godiste{
     margin-right: 3px;
 }
 
+#fiat-slika{
+    transform: scale(0.8);
+}
+
+#fiat-div:hover #fiat-slika{
+    transform: scale(0.9);
+}
+
+#mercedez-slika{
+    transform: scaleX(-1);
+}
+
 #nemaRezultataDiv{
     background-color: rgba(0, 0, 0, 0.8);
 }
