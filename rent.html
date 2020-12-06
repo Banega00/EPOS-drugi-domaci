@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Goldman&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style/nav.css">
+    <link rel="stylesheet" href="style/rent.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="mobile-menu">
+        <div>
+            <div><a href="index.html" target="_blank">Početna</a></div>
+            <div><a href="polovni.html" target="_blank">Polovni automobili</a></div>
+            <div><a href="novi.html" target="_blank">Novi automobili</a></div>
+            <div><a href="servis.html" target="_blank">Servis</a></div>
+            <div><a href="rent.html" target="_blank">Rent</a></div>
+        </div>
+    </div>
+    <nav>
+        <img src="slike/ikonice/hamburger.png" alt="" id="hamburger">
+        <div id="menu">
+            <div><a href="index.html" target="_blank">Početna</a></div>
+            <div><a href="polovni.html" target="_blank">Polovni</a></div>
+            <div><a href="novi.html" target="_blank">Novi</a></div>
+            <div><a href="servis.html" target="_blank">Servis</a></div>
+            <div><a href="rent.html" target="_blank">Rent</a></div>
+        </div>
+        <div id="logo">
+            <h1>Rent a car</h1>
+        </div>
+    </nav>
+    <header>
+        <div id="zgrade">
+            <img class='auto-ulece' src="slike/pozadine/auto_ulece.png" alt="">
+            <div id="izaberi-container">
+                <div>
+                    <h4>Mesto preuzimanja</h4>
+                    <div class="select-div">
+                        <select name="mesto-preuzimanja" id="mesto-preuzimanja">
+                            <option value="">Izaberi lokaciju</option>
+                            <option value="">Beograd</option>
+                            <option value="">Nis</option>
+                            <option value="">Novi Sad</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <h4>Datum preuzimanja</h4>
+                    <div class="date-time-picker-container">
+                        <input type="date" name="" id="datum-preuzimanja">
+                        <select name="datum-preuzimanja" id="vreme-preuzimanja">
+                            <option value="">00:00</option>
+                            <option value="">01:00</option>
+                            <option value="">02:00</option>
+                            <option value="">03:00</option>
+                            <option value="">04:00</option>
+                            <option value="">05:00</option>
+                            <option value="">06:00</option>
+                            <option value="">07:00</option>
+                            <option value="">08:00</option>
+                            <option value="">09:00</option>
+                            <option value="">10:00</option>
+                            <option value="">11:00</option>
+                            <option value="" selected>12:00</option>
+                            <option value="">13:00</option>
+                            <option value="">14:00</option>
+                            <option value="">15:00</option>
+                            <option value="">16:00</option>
+                            <option value="">17:00</option>
+                            <option value="">18:00</option>
+                            <option value="">19:00</option>
+                            <option value="">20:00</option>
+                            <option value="">21:00</option>
+                            <option value="">22:00</option>
+                            <option value="">23:00</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <h4>Mesto vraćanja</h4>
+                    <div class="select-div">
+                        <select name="mesto-preuzimanja" id="mesto-vracanja">
+                            <option value="">Izaberi lokaciju</option>
+                            <option value="">Beograd</option>
+                            <option value="">Nis</option>
+                            <option value="">Novi Sad</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <h4>Datum vraćanja</h4>
+                    <div class="date-time-picker-container">
+                        <input type="date" name="" id="datum-vracanja">
+                        <select name="datum-vracanja" id="vreme-vracanja">
+                            <option value="">00:00</option>
+                            <option value="">01:00</option>
+                            <option value="">02:00</option>
+                            <option value="">03:00</option>
+                            <option value="">04:00</option>
+                            <option value="">05:00</option>
+                            <option value="">06:00</option>
+                            <option value="">07:00</option>
+                            <option value="">08:00</option>
+                            <option value="">09:00</option>
+                            <option value="">10:00</option>
+                            <option value="">11:00</option>
+                            <option value="" selected>12:00</option>
+                            <option value="">13:00</option>
+                            <option value="">14:00</option>
+                            <option value="">15:00</option>
+                            <option value="">16:00</option>
+                            <option value="">17:00</option>
+                            <option value="">18:00</option>
+                            <option value="">19:00</option>
+                            <option value="">20:00</option>
+                            <option value="">21:00</option>
+                            <option value="">22:00</option>
+                            <option value="">23:00</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="pronadji-vozilo-container">
+                        <button id="pronadji-vozilo" onclick="vratiBrojSati()">Pronadji vozilo</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="ikonice-container">
+        <div>
+            <div><img class="ikonica" src="slike/ikonice/kuca.png" alt=""></div>
+            <div>
+                Dostave vozilana kućnu adresu
+            </div>
+        </div>
+        <div>
+            <div><img id="ikonica-novcanik" class="ikonica" src="slike/ikonice/novcanik.png" alt=""></div>
+            <div>
+                Rezervacija vozila bez depozita
+            </div>
+        </div>
+        <div>
+            <div><img class="ikonica" src="slike/ikonice/osiguranje.png" alt=""></div>
+            <div>
+                Kasko osiguranje vozila
+            </div>
+        </div>
+        <div>
+            <div><img class="ikonica" src="slike/ikonice/sat.png" alt=""></div>
+            <div>
+                Produžavanja perioda iznamljivanja
+            </div>
+        </div>
+        <div>
+            <div><img class="ikonica" src="slike/ikonice/cena.png" alt=""></div>
+            <div>
+                Najpovoljinije cene u regionu
+            </div>
+        </div>
+        <div>
+            <div><img class="ikonica" src="slike/ikonice/lokacija.png" alt=""></div>
+            <div>
+                Tri lokacije za preuzimanje vozila
+            </div>
+        </div>
+    </div>
+
+    <div id="rezultat-container">
+        <div id="tabela-rezultata">
+            <div id="zaglavlje" class="red">
+                <div class="prva-kolona">Automobil</div>
+                <div class="druga-kolona">Broj sati</div>
+                <div class="treca-kolona">Cena</div>
+            </div>
+        </div>
+        <div><h1>Rezervišite vaše vozilo na +381 64 3921197</h1></div>
+    </div>
+    <script src="script/menu.js"></script>
+    <script src="script/rent.js"></script>
+</body>
+
+</html>

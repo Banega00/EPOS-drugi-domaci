@@ -1,0 +1,287 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: lightgray;
+    overflow-x: hidden;
+}
+header{
+    width: 100vw;
+    height: 80vh;
+    margin-bottom: 35px;
+}
+
+#zgrade{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    /* background-attachment: fixed; */
+    background-repeat: no-repeat;
+    background-position: 50% calc(50% + 70px);
+    background-image: url("../slike/pozadine/zgrade.jpg");
+    display: flex;
+    flex-direction: column;
+}
+
+.auto-ulece{
+    transform: scaleX(-1);
+    width: 350px;
+    object-fit: contain;
+    position: absolute;
+    top:30%;
+    left:-50%;
+    transform: translateX(-50%) scaleX(-1);
+    animation: uletanje 2s ease forwards;
+}
+
+@keyframes uletanje{
+    from{left:-90%}
+    to{left:50%}
+}
+
+#izaberi-container{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    margin-top: auto;
+    flex-wrap: wrap;
+}
+
+#izaberi-container select,#izaberi-container input{
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+select#vreme-preuzimanja,
+select#vreme-vracanja
+{
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    border-left: 1px solid black;
+}
+
+[type="date"]{
+    border-bottom-right-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+}
+
+#izaberi-container > *{
+    flex:1;
+    flex-basis: 1;
+    flex-grow: 1;
+    flex-shrink: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+#izaberi-container > * > *{
+    flex:1;
+}
+
+#izaberi-container > * h4{
+    color:white;
+    padding:10px;
+    font-weight: 200;
+    display: flex; align-items: center;
+}
+
+.select-div{
+    padding:10px;
+}
+
+.select-div select{
+    width:100%;
+}
+
+.date-time-picker-container{
+    display: flex;
+    justify-content: center;
+    padding:10px;
+}
+
+.date-time-picker-container > input[type="date"]{
+    flex:2;
+}
+
+.date-time-picker-container > select{
+    flex:1;
+}
+
+#pronadji-vozilo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:25px;
+}
+
+#pronadji-vozilo-container > button{
+    width: 100%;
+    height: 100%;
+    background-color: orange;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color:white;
+    font-size: 1.5em;
+    transition: background-color 0.5s;
+}
+
+#pronadji-vozilo-container > button:hover{
+    background-color: red;
+}
+
+@media only screen and (max-width: 500px){
+    header{
+        height: auto;
+    }
+    .auto-ulece{
+        position: static;
+        animation:none;
+        width: 85vw;
+        height: auto;
+        margin-top: 15vh;
+        transform: translate(0) scaleX(-1);
+    }
+
+    /* #izaberi-container{
+        flex-direction: column;
+    } */
+
+    #zgrade{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    #izaberi-container{
+        flex-direction: column;
+    }
+
+    div#tabela-rezultata{
+        width: 100%;
+    }
+    
+    div#tabela-rezultata .red > div{
+        border-right:1px solid black;
+    }
+}
+
+#rezultat-container{
+    padding-top: 100px;
+    width: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#rezultat-container h1{
+    padding-bottom: 20px;
+}
+
+#tabela-rezultata{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    color:white;
+    border-top:3px solid black;
+    border-bottom: 2px solid black;
+    margin-bottom: 100px;
+}
+
+#tabela-rezultata .red{
+    width: 100%;
+    height: 30px;
+    display: flex;
+}
+
+#tabela-rezultata .red > div{
+    padding-left: 5px;
+}
+
+
+#tabela-rezultata .red > *{
+    flex:3;
+    display: flex;
+    align-items: center;
+}
+
+#tabela-rezultata .red > *:first-child{
+    flex:5;
+}
+
+#tabela-rezultata .red:nth-child(odd){
+    background-color: rgb(255, 124, 2);
+}
+
+#tabela-rezultata .red:nth-child(even){
+    background-color: black;
+}
+
+#tabela-rezultata .red:first-child{
+    height: 40px;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.ikonice-container{
+    width: 100%;
+    padding-top:35px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ikonice-container > div{
+    flex:1;
+}
+
+.ikonice-container > div > div:first-child{
+    width: 84px;
+    height: 84px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s;
+    cursor: pointer;
+}
+
+.ikonice-container > div > div{
+    text-align: center;
+}
+
+.ikonice-container > div > div:first-child:hover .ikonica{
+    transform: scale(1.2);
+    filter: drop-shadow(8px 7px 4px #7c6f62);
+}
+
+.ikonice-container > div{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ikonica{
+    width: 56px;
+    height: 56px;
+    filter: drop-shadow(5px 5px 2px #7c6f62);
+    transition: transform 0.4s, filter 0.4s;
+}
+
+#ikonica-novcanik{
+    width: 50px;
+    height: 50px;
+}
