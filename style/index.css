@@ -199,9 +199,12 @@ footer p{
 }
 
 .posalji-pitanje-dugme{
-    background-color: rgb(53, 7, 16);
+    background-color: rgb(109, 14, 33);
     padding:10px 20px;
     text-align: center;
+    border:none;
+    outline:none;
+    font-size: 1.4em;
     cursor: pointer;
     transition:background-color 0.4s, color 0.4s;
 }

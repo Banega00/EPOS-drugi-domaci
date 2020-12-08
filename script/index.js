@@ -1,7 +1,8 @@
 const ime = document.getElementById("ime");
 const email = document.getElementById("email");
 const text = document.getElementById("pitanje")
-function posaljiPitanje(){
+function posaljiPitanje(event){
+    event.preventDefault();
     if(ime.value=="" || ime.value.length<3){
         alert('Morate uneti vase ime!');
         return;
