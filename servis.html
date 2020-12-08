@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Goldman&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style/nav.css">
+    <link rel="stylesheet" href="style/servis.css">
+    <title>Servis</title>
+</head>
+
+<body>
+    <div id="mobile-menu">
+        <div>
+            <div><a href="index.html" target="_blank">Početna</a></div>
+            <div><a href="polovni.html" target="_blank">Polovni automobili</a></div>
+            <div><a href="novi.html" target="_blank">Novi automobili</a></div>
+            <div><a href="servis.html" target="_blank">Servis</a></div>
+            <div><a href="rent.html" target="_blank">Rent</a></div>
+        </div>
+    </div>
+    <nav>
+        <img src="slike/ikonice/hamburger.png" alt="" id="hamburger">
+        <div id="menu">
+            <div><a href="index.html" target="_blank">Početna</a></div>
+            <div><a href="polovni.html" target="_blank">Polovni</a></div>
+            <div><a href="novi.html" target="_blank">Novi</a></div>
+            <div><a href="servis.html" target="_blank">Servis</a></div>
+            <div><a href="rent.html" target="_blank">Rent</a></div>
+        </div>
+        <div id="logo">
+            <h1>Servis</h1>
+        </div>
+    </nav>
+
+    <main>
+
+        <div class="flip-kartica-container">
+            <div class="flip-kartica">
+                <div class="prednja-strana">
+                    <img src="slike/mali_servis.jpg" alt="">
+                    <h2>Mali servis</h2>
+                    <div class="strelica-desno"></div>
+                </div>
+                <div class="zadnja-strana">
+                    <div class="podaci">
+                        <ul>
+                            <li>Zamena motornog ulja</li>
+                            <li>Zamena filtera motornog ulja</li>
+                            <li>Poništavanje servisnog intervala</li>
+                            <li>Zamena filtera vazduha motora</li>
+                            <li>Zamena filtera vazduha kabine</li>
+                            <li>Zamena filtera goriva</li>
+                            <li>Provera nivoa kočione tečnosti</li>
+                            <li>Provera nivoa rashladne tečnosti</li>
+                        </ul>
+                    </div>
+                    <div class="cena">95€</div>
+                    <div class="zakazi-dugme jedan" onclick="zakazi(1)">Zakaži</div>
+                    <div class="strelica-levo"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-kartica-container">
+            <div class="flip-kartica">
+                <div class="prednja-strana">
+                    <img src="slike/veliki_servis.jpg" alt="">
+                    <h2>Veliki servis</h2>
+                    <div class="strelica-desno"></div>
+                </div>
+                <div class="zadnja-strana">
+                    <div class="podaci">
+                        <ul>
+                            <li>Zamenu zupčastog kaiša</li>
+                            <li>Zamenu PK kaiša</li>
+                            <li>Zamenu rolera i španera</li>
+                            <li>Zamena vodene pumpe</li>
+                            <li>Zamena svećica</li>
+                            <li>Test akumulatora</li>
+                            <li>Zamena kočionog i ulja menjača</li>
+                            <li>Opširnija provera raznih sistema na automobilu</li>
+                        </ul>
+                    </div>
+                    <div class="cena">145€</div>
+                    <div class="zakazi-dugme dva" onclick="zakazi(2)">Zakaži</div>
+                    <div class="strelica-levo"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-kartica-container">
+            <div class="flip-kartica">
+                <div class="prednja-strana">
+                    <img src="slike/tehnicki.jpg" alt="">
+                    <h2>Tehnički pregled</h2>
+                    <div class="strelica-desno" id="desno"></div>
+                </div>
+                <div class="zadnja-strana">
+                    <div class="podaci">
+                        <ul>
+                            <li>Pregled uređaja za upravljanje</li>
+                            <li>Pregled uređaja za zaustavljanje</li>
+                            <li>Pregled uređaja koji omogućavaju normalnu vidljivost</li>
+                            <li>Pregled uređaja za davanje zvučnih znakova</li>
+                            <li>Pregled elektrouređaja i instalacijas</li>
+                            <li>Pregled pogonskog uređaja</li>
+                            <li>Pregled uređaja za oslanjanje</li>
+                            <li>Pregled ostalih uređaja i delova vozila</li>
+                        </ul>
+                    </div>
+                    <div class="cena">55€</div>
+                    <div class="zakazi-dugme tri" onclick="zakazi(3)">Zakaži</div>
+                    <div class="strelica-levo"></div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <form class="form-container" id="forma">
+            <h3>Zakaži servis</h3>
+            <select name="" id="">
+                <option value="">Mali servis</option>
+                <option value="">Veliki servis</option>
+                <option value="">Tehnički pregled</option>
+            </select>
+            <input type="text" name="ime" id="ime" placeholder="Vaše ime i prezime">
+            <input type="tel" name="telefon" id="" placeholder="Mobilni telefon">
+            <div class="datum-vreme">
+                <input type="date" name="" id="datum-preuzimanja">
+                <select name="datum-preuzimanja" id="vreme-preuzimanja">
+                    <option value="">00:00</option>
+                    <option value="">01:00</option>
+                    <option value="">02:00</option>
+                    <option value="">03:00</option>
+                    <option value="">04:00</option>
+                    <option value="">05:00</option>
+                    <option value="">06:00</option>
+                    <option value="">07:00</option>
+                    <option value="">08:00</option>
+                    <option value="">09:00</option>
+                    <option value="">10:00</option>
+                    <option value="">11:00</option>
+                    <option value="" selected>12:00</option>
+                    <option value="">13:00</option>
+                    <option value="">14:00</option>
+                    <option value="">15:00</option>
+                    <option value="">16:00</option>
+                    <option value="">17:00</option>
+                    <option value="">18:00</option>
+                    <option value="">19:00</option>
+                    <option value="">20:00</option>
+                    <option value="">21:00</option>
+                    <option value="">22:00</option>
+                    <option value="">23:00</option>
+                </select>    
+            </div>
+            <div class="zakazi" onclick="zakaziKonacno()">Zakaži</div>
+        </form>
+        <div class="lokacije-servisa-div">
+            <div>Lokacije servis</div>
+            <div><img src="slike/ikonice/lokacija2.png" alt="">Milutina Milankovića 64,Beograd, +38163219424</div>
+            <div><img src="slike/ikonice/lokacija2.png" alt="">Stevana Sinđelića 11, Niš, +38162124901</div>
+            <div><img src="slike/ikonice/lokacija2.png" alt="">Partizanska 33, Novi Sad, +38164234156</div>
+        </div>
+    </footer>
+    <script src="script/menu.js"></script>
+    <script src="script/servis.js"></script>
+</body>
+
+</html>

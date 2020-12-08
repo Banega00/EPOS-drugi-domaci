@@ -1,0 +1,281 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    color:white;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: lightgrey;
+}
+
+main{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top:100px;
+    margin-bottom: 100px;
+}
+
+main > div{
+    flex:0 0 27%;
+    height: 400px;
+    width:27%;
+    cursor: pointer;
+
+}
+
+@media only screen and (max-width: 600px){
+    main{
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    main > div{
+        width: 90%;
+        margin-bottom: 50px;
+    }
+}
+
+/* Prednja strana */
+main > div:nth-child(1) .prednja-strana{
+    background-color: rgb(172, 20, 20);
+}
+main > div:nth-child(2) .prednja-strana{
+    background-color: rgb(124, 124, 124);
+}
+main > div:nth-child(3) .prednja-strana{
+    background-color: rgb(14, 14, 182);
+}
+
+main > div:nth-child(1) .zadnja-strana{
+    background-color: rgb(235, 33, 33);
+}
+main > div:nth-child(2) .zadnja-strana{
+    background-color: rgb(190, 190, 190);
+}
+main > div:nth-child(3) .zadnja-strana{
+    background-color: rgb(28, 28, 241);
+}
+
+
+/* main > div{
+    box-shadow: 5px 5px 19px 6px rgba(0,0,0,0.3);
+    color:white;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+} */
+
+.flip-kartica-container {
+  background-color: transparent;
+  perspective: 1000px; /* 3D efekat */
+}
+  
+.flip-kartica {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-kartica-container:hover .flip-kartica {
+  transform: rotateY(-180deg);
+}
+
+.prednja-strana, .zadnja-strana {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.prednja-strana {
+    box-shadow: 5px 5px 19px 6px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.prednja-strana img{
+    width: 93%;
+    height: 54%;
+    margin-top: 5%;
+    flex:6;
+}
+
+.zadnja-strana {
+  transform: rotateY(-180deg);
+  box-shadow: 5px 5px 19px 6px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+h2{
+    width: 80%;
+    min-width: 200px;
+    border-top: 1.5px solid white;
+    text-align: left;
+    flex:4;
+    margin-top: 15%;
+}
+
+.zakazi-dugme{
+    width: 65%;
+    min-width: 100px;
+    padding:15px;
+    border-radius: 20px;
+    border: 3px solid white;
+    align-self: center;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.zakazi-dugme:hover{
+    transform: scale(1.05);
+}
+
+.zakazi-dugme.jedan{
+    background-color: rgb(163, 16, 16);
+}
+
+.zakazi-dugme.jedan:hover{
+    background-color: rgb(105, 8, 8);
+}
+
+.zakazi-dugme.dva{
+    background-color: rgb(136, 136, 136);
+}
+
+.zakazi-dugme.dva:hover{
+    background-color: gray;
+}
+
+.zakazi-dugme.tri{
+    background-color: rgb(11, 11, 179);
+}
+
+.zakazi-dugme.tri:hover{
+    background-color: rgb(12, 12, 143);
+}
+
+.cena{
+    font-size: 2.5em;
+    border-bottom:3px solid white;
+    widows: 30%;
+    align-self: center;
+}
+
+
+.podaci ul li{
+    text-align: left;
+}
+
+footer{
+    background-color: gray;
+    height: 55vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:20px 10%;
+
+}
+
+
+.form-container{
+    height: 100%;
+    width: 40%;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+@media only screen and (max-width: 550px){
+    .form-container{
+        width: 100%;
+    }
+    
+    .strelica-desno{
+        display: block;
+    }
+
+    .strelica-levo{
+        display: block;
+    }
+    footer{
+        flex-direction: column-reverse;
+    }
+}
+
+.lokacije-servisa-div{
+    padding-top:10px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.lokacije-servisa-div > div{
+    display: flex;
+    align-items: center;
+}
+
+select{
+    color:black;
+}
+
+
+.datum-vreme{
+    width: 100%;
+    display: flex;
+    color:black;
+}
+.datum-vreme > *{
+    flex:1;
+    color:black;
+}
+
+
+.zakazi{
+    align-self: center;
+    background-color: black;
+    font-size: 1.4em;
+    padding:10px 20px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.zakazi:hover{
+    transform: scale(1.2);
+    background-color: crimson;
+}
+
+.strelica-desno{
+    display: none;
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    position: absolute;
+    bottom: 10px;
+    right:10px;
+    background:url('../slike/ikonice/jos_podataka_ikonica.png');
+}
+
+.strelica-levo{
+    display: none;
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    position: absolute;
+    bottom: 10px;
+    left:10px;
+    background:url('../slike/ikonice/jos_podataka_ikonica.png');
+    transform: scaleX(-1);
+}

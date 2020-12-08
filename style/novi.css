@@ -31,19 +31,18 @@ body{
 }
 
 #pozadine > *{
-    height: 95vh;
+    height: 111vh;
     width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
-    
 }
 
 #prva-slika {
     background-image: url("../slike/pozadine/jumbotron14.jpg");
     background-position: 50% calc(50% - 100px);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
 }
 
 #druga-slika {
@@ -178,11 +177,15 @@ select{
     grid-auto-rows: 240px;
     gap: 5%;
     justify-items: center;
+
+
+    margin-bottom: 100px;
 }
 
 @media only screen and (max-width: 630px){
     #automobili-container{
         padding-top: 270px 10% 0 10%;
+        gap:40px;
     }
 }
 
@@ -279,4 +282,9 @@ select{
     margin:auto;
     width: 65%;
     display: none;
+}
+
+
+.flip-car-hor{
+    transform: scaleX(-1);
 }

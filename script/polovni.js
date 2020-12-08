@@ -34,10 +34,7 @@ function filter(){
         zadovoljavaKaroserijuVar = zadovoljavaKaroseriju(automobil);
         zadovoljavaGodisteVar = zadovoljavaGodiste(automobil);
         zadovoljavaKilometrazuVar = zadovoljavaKilometrazu(automobil);
-        // console.log(zadovoljavaCenuVar);
-        // console.log(zadovoljavaGorivoVar);
-        // console.log(zadovoljavaMarkuVar);
-        // console.log(zadovoljavaKaroserijuVar);
+        
         if(
             !zadovoljavaCenuVar||
             !zadovoljavaGorivoVar ||

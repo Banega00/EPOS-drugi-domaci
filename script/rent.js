@@ -18,6 +18,7 @@ var tabelaPrikazana=false;
 function pronadjiVozilo(brojSati){
 
     automobili=automobili.sort(() => Math.random() - 0.5);
+   
     tabela.innerHTML='<div id="zaglavlje" class="red">'+
     '<div class="prva-kolona">Automobil</div>'+
     '<div class="druga-kolona">Broj sati</div>'+

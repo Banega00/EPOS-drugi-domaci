@@ -9,7 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="style/index.css">
     <link rel="stylesheet" href="style/nav.css">
-    <title>Document</title>
+    <title>Početna</title>
 </head>
 
 <body>
@@ -149,10 +149,26 @@
 
     </main>
     <footer>
-
+        <form class="form-container" id="forma">
+            <h3>Postavi nam pitanje</h3>
+            <p>Ukoliko te zanima još nešto u vezi sa našim Auto centrom, slobodno nam postavi pitanje!</p>
+            <input type="text" name="ime" id="ime" placeholder="Vaše ime i prezime">
+            <input type="email" name="email" id="email" placeholder="Email adersa">
+            <textarea name="pitanje" id="pitanje" cols="8" rows="4" placeholder="Postavite pitanje..."></textarea>
+           
+                
+            <div class="posalji-pitanje-dugme" onclick="posaljiPitanje()">Pošalji pitanje</div>
+        </form>
+        <div class="lokacije-servisa-div">
+            <div><img src="slike/ikonice/telefon.png" id="telefon-ikonica" alt="">+381 60 2183261</div>
+            <div><img src="slike/ikonice/lokacija2.png" alt="">Milutina Milankovića 64,Beograd , salon automobila</div>
+            <div><img src="slike/ikonice/lokacija2.png" alt="">Stevana Sinđelića 11, Niš, autoplac</div>
+            <div><img src="slike/ikonice/lokacija2.png" alt="">Partizanska 33, Novi Sad, autoplac</div>
+        </div>
     </footer>
 
     <script src="script/menu.js"></script>
+    <script src="script/index.js"></script>
 </body>
 
 </html>
