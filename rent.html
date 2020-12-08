@@ -8,6 +8,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="style/nav.css">
     <link rel="stylesheet" href="style/rent.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <title>Rent a car</title>
 </head>
 
@@ -36,7 +38,7 @@
     </nav>
     <header>
         <div id="zgrade">
-            <img class='auto-ulece' src="slike/pozadine/auto_ulece.png" alt="">
+            <img class='auto-ulece' id="draggable" src="slike/pozadine/auto_ulece.png" alt="">
             <div id="izaberi-container">
                 <div>
                     <h4>Mesto preuzimanja</h4>
@@ -125,7 +127,7 @@
                     </div>
                 </div>
                 <div id="pronadji-vozilo-container">
-                        <button id="pronadji-vozilo" onclick="vratiBrojSati()">Pronadji vozilo</button>
+                    <button id="pronadji-vozilo" onclick="vratiBrojSati()">Pronadji vozilo</button>
                 </div>
             </div>
         </div>
@@ -178,10 +180,17 @@
                 <div class="treca-kolona">Cena</div>
             </div>
         </div>
-        <div><h1>Rezervišite vaše vozilo na +381 64 3921197</h1></div>
+        <div>
+            <h1>Rezervišite vaše vozilo na +381 64 3921197</h1>
+        </div>
     </div>
     <script src="script/menu.js"></script>
     <script src="script/rent.js"></script>
+    <script>
+        $(function () {
+            $("#draggable").draggable();
+        })
+    </script>
 </body>
 
 </html>

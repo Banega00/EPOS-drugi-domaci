@@ -27,29 +27,28 @@ header{
     background-image: url("../slike/pozadine/zgrade.jpg");
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
 }
 
 .auto-ulece{
     transform: scaleX(-1);
     width: 350px;
     object-fit: contain;
-    position: absolute;
-    top:30%;
-    left:-50%;
-    transform: translateX(-50%) scaleX(-1);
+    align-self: center;
+    
     animation: uletanje 2s ease forwards;
 }
 
 @keyframes uletanje{
-    from{left:-90%}
-    to{left:50%}
+    from{transform:translateX(-300%) scaleX(-1)}
+    to{transform:translateX(0) scaleX(-1)}
 }
 
 #izaberi-container{
     width: 100%;
     background-color: rgba(0, 0, 0, 0.6);
     display: flex;
-    margin-top: auto;
+    /* margin-top: auto; */
     flex-wrap: wrap;
 }
 
