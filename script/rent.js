@@ -1,6 +1,26 @@
 automobili=[
-    {ime:'Skoda Superb', cenaSata:1.2},
-    {ime:'Opel Insignia', cenaSata:1.15},
+    {ime:'Audi A5', cenaSata:1.3},
+    {ime:'BMW 720li', cenaSata:1.7},
+    {ime:'BMW i8', cenaSata:1.80},
+    {ime:'BMW X3', cenaSata:1.35},
+    {ime:'Fiat 500', cenaSata:0.8},
+    {ime:'Land Rover Discovery', cenaSata:1.70},
+    {ime:'Mercedes Benz GL320', cenaSata:1.55},
+    {ime:'Mercedes Benz SL Roadster', cenaSata:1.75},
+    {ime:'Nissan Qashqai', cenaSata:1.2},
+    {ime:'Opel Astra', cenaSata:1.05},
+    {ime:'Opel Insignia', cenaSata:1.25},
+    {ime:'Peugeot 308', cenaSata:1.1},
+    {ime:'Porsche Macan', cenaSata:1.60},
+    {ime:'Renault Clio', cenaSata:0.9},
+    {ime:'Škoda Kodiaq', cenaSata:1.35},
+    {ime:'Škoda Superb', cenaSata:1.3},
+    {ime:'Toyota Auris', cenaSata:0.90},
+    {ime:'Toyota Prius', cenaSata:1.10},
+    {ime:'Volkswagen Polo', cenaSata:0.95},
+    {ime:'Volkswagen Passat', cenaSata:1.35},
+
+    
     
 ]
 

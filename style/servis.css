@@ -194,8 +194,11 @@ footer{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
+    color: black;
 }
+
+
+
 
 @media only screen and (max-width: 550px){
     .form-container{
@@ -241,6 +244,8 @@ select{
     flex:1;
     color:black;
 }
+
+.datum-vreme
 
 
 .zakazi{
