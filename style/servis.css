@@ -245,10 +245,8 @@ select{
     color:black;
 }
 
-.datum-vreme
 
-
-.zakazi{
+#zakazi{
     align-self: center;
     background-color: black;
     font-size: 1.4em;
@@ -257,7 +255,7 @@ select{
     transition: transform 0.3s, background-color 0.3s;
 }
 
-.zakazi:hover{
+#zakazi:hover{
     transform: scale(1.2);
     background-color: crimson;
 }
