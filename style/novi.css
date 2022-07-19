@@ -192,6 +192,7 @@ select{
 .automobil-kartica{
     position: relative;
     background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
     max-width: 300px;
 }
 
